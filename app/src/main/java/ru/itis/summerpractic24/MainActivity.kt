@@ -1,20 +1,25 @@
 package ru.itis.summerpractic24
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import kotlin.random.Random
 
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+        val inputField: EditText = findViewById(R.id.inputField)
+        val startButton: Button = findViewById(R.id.startButton)
 
-            buttonStartRace.setOnClickListener {
-            val carCount = editTextCarCount.text.toString().toIntOrNull() ?: 0
+        startButton.setOnClickListener {
+            val carCount = inputField.text.toString().toIntOrNull() ?: 0
 
             if (carCount > 0) {
                 val cars = generateRandomCars(carCount)

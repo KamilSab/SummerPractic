@@ -8,30 +8,30 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextCarCount"
-        android:layout_width="wrap_content"
+        android:id="@+id/inputField"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_below="@id/main"
         android:hint="Введите количество автомобилей"
-        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.415"/>
+        tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/buttonStartRace"
+        android:id="@+id/startButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextCarCount"
+        android:layout_below="@id/inputField"
         android:layout_centerHorizontal="true"
-        android:text="Начать гонки"
+        android:text="Старт"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"/>
+        app:layout_constraintVertical_bias="0.585" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
